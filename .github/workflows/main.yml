@@ -30,7 +30,3 @@ jobs:
       - name: Push Image to Dockerhub
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/bricksync-dsm:${{ steps.vars.outputs.sha_short }}
-
-      - name: Push Image as Latest
-        run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/bricksync-dsm:latest
